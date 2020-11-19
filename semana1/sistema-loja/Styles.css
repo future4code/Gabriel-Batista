@@ -1,0 +1,31 @@
+        .Back {
+      max-width: 500px;
+      margin: auto;
+      align-content: center;
+      background-image: url('./image/Back.jpg');
+    }
+    
+ 
+    .homebar {
+        align-content: center;
+        background-color: #bbb8b8c0;
+        padding: 10px;
+        border: 1px solid #333; 
+        margin-bottom: 10px;
+        display: inline-block; 
+      }
+
+    #subt   
+      {
+        display: inline-block;
+        margin: 13px
+    }   
+
+    .form {
+        display: inline-block;
+       }
+
+   .topname > p {
+        align-content: center;
+        color:darkblue
+    }
