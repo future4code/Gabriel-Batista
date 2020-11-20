@@ -1,0 +1,89 @@
+.Back {
+    background-image: url('./image/back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.homebar
+  {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    display: inline-block; 
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-end;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;      
+    }
+
+    #foot
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: left;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 1.125em;
+    }
+
+#head {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.125em;
+  }
+    #main {
+      position: relative;
+      top: 0;
+      left: 25%;
+      right: 0;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 1.125em;
+      width: 50%;
+      height: 200px;
+      align-content: center;
+      display: inline-block; 
+      display: flex;
+      flex-wrap: wrap;     
+    }
+ 
+
+   #table {
+   
+      position: relative;
+      top: 0;
+      left: 5%;
+      right: 0;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 1.125em;
+    }
+
+    #lista
+    {
+      position: relative;
+      top: 0;
+      left: 25%;
+      right: 0;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 1.125em;
+      width: 50%;
+      height: 200px;
+      align-content: center;
+      display: inline-block; 
+      display: flex;
+      flex-wrap: wrap;
+    }
