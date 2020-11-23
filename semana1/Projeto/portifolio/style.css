@@ -1,0 +1,247 @@
+.body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('./image/back.jpg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+
+/* menu */
+.specialColor { 
+    background: transparent;
+     
+}
+.nav {
+	border-bottom: solid 1px #eaeaeb;
+	text-align: right;
+	height: 70px;
+    line-height: 70px;
+       
+}
+.menu {
+    margin: 0 30px 0 0;
+    background: transparent;
+    }
+ 
+
+.menu a {
+	clear: right;
+	text-decoration: none;
+	color: grey;
+	padding: 15px 15px 15px 15px;
+	margin: 0 10px;
+    line-height: 70px;
+    
+}
+.menu a:hover {
+	background-color: #888;
+    color: #fff;
+    
+}
+label {
+	margin: 0 40px 0 0;
+	font-size: 26px;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+    float: right;
+    
+}
+#toggle {
+    display: none;
+    
+}
+
+@media only screen and (max-width: 500px) {
+	label {
+		display: block;
+        cursor: pointer;  
+	}
+	.menu {
+		text-align: left;
+		width: 50%;
+		display: none;
+        position: static;
+        font-size: 12px;
+        margin: -10;
+        padding: -10px;
+      
+	}
+	.menu a {
+		display: block;
+		border-bottom: solid 1px #eaeaeb;
+		margin: 0;
+        padding: 0;
+       
+        
+	}
+	.menu a:hover {
+		color:#fff;
+        background-color: #888;
+        
+	}
+
+	#toggle:checked + .menu {
+        display: block;
+        
+    }
+    
+    h3{
+        max-width: 50%;
+        left: 70%;
+        margin-top: 25%;
+        margin-right: -10%;
+  }
+    
+    h5{
+        max-width: 40%;
+        left: 70%;
+        margin-right: -50%;
+        margin-top: 79%;
+      
+    }
+    h4{
+        margin: 5px 0px 0px 0px;
+        font-size: 11px;
+        width: 400px;
+        float: center;
+    }
+    h3{
+        margin: 5px 0px 0px 0px;
+        font-size: 11px;
+        width: 200px;
+        float: center;
+    }
+    h5{
+        margin: 5px 0px 0px 0px;
+        font-size: 11px;
+        width: 200px;
+        float: center;
+    }
+}
+
+/* contato */
+
+.fcontato {
+text-align: right;
+width: auto;   
+}
+
+.Groupo {
+    text-align:center;
+    border: 0 none;
+    width: 98%
+}
+.enviar{
+    text-align: left;
+	margin: 25px;
+	width: auto
+}
+
+  .Conteudo {
+    width: 300px;
+    height: 150px;
+    box-sizing: border-box;    
+}
+
+/* Sobre */
+.avatar{
+    background: #d5d9f6;
+    border-radius: 70px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    transition: all .8s ease;
+    width: 100px;
+    padding: 3px 3px 5px 5px;
+    margin: 10px;
+    float: left;
+}
+dl{
+    background: transparent;
+    height: 10px;
+    position: relative;
+    transition: all .8s ease;
+    width: 138px;
+    margin: 10px;
+    text-align: left;
+  }
+dt{
+    font-weight: bold;
+}
+h3{
+    position: absolute;
+    max-width: 50%;
+    left: 65%;
+    margin-top: 15%;
+    margin-right: -10%;
+    transform: translate(-50%, -50%)
+}
+
+h5{
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    max-width: 40%;
+    left: 75%;
+    margin-right: -50%;
+    margin-top: 36%;
+    transform: translate(-50%, -50%)
+}
+
+
+/* foot */
+.Foot{
+ 
+    background-color: black;
+    color:whitesmoke;   
+    position: fixed;
+    bottom:0;
+    width:100%; 
+    padding: 5px; 
+    text-align: center;
+  }
+
+  /* home */
+
+
+  h1{
+    font-family: 'Sansita Swashed', cursive;
+    text-align:center
+  }
+    
+h4{
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    max-width: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.main{
+ text-align: center; }
+
+
+
+/* Portfolio */
+.img:hover {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:400px;
+    height:auto;
+    display:block;
+    z-index:999;
+}
+
+ul.b {
+    list-style-position: inside;
+  }
