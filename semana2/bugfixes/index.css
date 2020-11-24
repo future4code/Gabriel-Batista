@@ -1,0 +1,204 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+
+.titulo
+{
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    right: 42%;
+    bottom: 50%;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+ol{
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    right: 42%;
+    bottom: 50%;
+    display: inline-block;  
+    font-family: 'Roboto', sans-serif;
+}
+h3{
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    right: 40%;
+    bottom: 30%;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif; 
+}
+
+div img {
+    background:transparent;
+     
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+    
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+    
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+/* div:nth-child(2), */
+div:last-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+    width: 80% !important;margin: auto;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+    
+}
+td button:hover {
+    background-color: #c44f00;
+   
+}
+
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+}
+
+input{
+    float: center;
+    padding: 6px;
+    border: 10;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    border-top-width: 1x;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+}
+.icone {
+    position: absolute;
+    width: 2%;
+    top: 9%;
+    left: 70%;
+    right: 50%;
+    bottom: 70%;
+    
+}
+
+
+
+#back-button {
+    
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
+.back{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    right: 50%;
+    bottom: 70%;
+}
