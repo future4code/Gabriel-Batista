@@ -91,18 +91,11 @@
 
 // 4
 
-let array = [um, dois ,tres]
-const v = true
-const f = false
-
-um=prompt("2>3?")
-dois=prompt("5=8?")
-tres=prompt("1<2?")
-
-if (um=v)console.log(v)
-else if (um=f) console.log(f)
-
-// console.log(um=f)
-// console.log(um)
-// console.log(dois)
-// console.log(tres)
+let perguntas = ['2>3?', '5=8?' ,'1<2?']
+let respostas = [false,false,true]
+console.log(perguntas[0])
+console.log(respostas[0])
+console.log(perguntas[1])
+console.log(respostas[1])
+console.log(perguntas[2])
+console.log(respostas[2])
