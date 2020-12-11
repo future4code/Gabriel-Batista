@@ -85,16 +85,32 @@ o código exibe os numeros conforme solicitado porem nao consegui incluir o 0.
 const quantidadeDeNumerosPares = parseInt(prompt('Quantos numeros pares devem ser mostrados?'))
 let i = 0
 while(i < quantidadeDeNumerosPares) {
-    i++
   console.log(i*2)
+  i++
 }
-
 
 */
 
-/*
+/* 4:
 
+let a= parseInt(prompt('Insira o valor do lado A do triangulo!'))
+let b= parseInt(prompt('Insira o valor do lado B do triangulo!'))
+let c= parseInt(prompt('Insira o valor do lado C do triangulo!'))
+ 
+const tiposDeTriangulo = () => {
+    if(a == b && b ==c){
+        console.log("Triangulo equilatero!");
+        }
+        else if(a != b && b != c && c != a){
+        console.log("Triangulo escaleno!");
+        }
+        else{
+        console.log("Triangulo isóceles!");
+     }
+ 
+}
 
+tiposDeTriangulo()
 
 */
 
