@@ -230,8 +230,8 @@ console.log(`Venha assistir ao filme ${filmes.titulo}, de ${filmes.ano}, dirigid
 
 // */
 
-
-/*
+//Exercícios de Funções de array
+/* 1:
 
 
 
