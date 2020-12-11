@@ -21,11 +21,13 @@ Na quinta e sexta linha temos duas variáveis ambas calculando o tipo de investi
 
 e nas ultimas linhas temos dois Logs o primeiro com o resultado das operações acima sendo eles 165 em açoes e no segundo teríamos um erro ja que o tesouro direto nao é uma opção.
 
-*/
+*/ 
 
-
-/*
-
+/* 3:
+Nas tres primeiras linhas temos 3 variáveis como arrays um chamado numeros ja com valores e os array1 e array2 sem nenhum dado inicial.
+Logo abaixo temos um for que vai verificar todos os camps do Array numeros e conferir usando um if quais numeros são pares e quais são impares.
+caso par sera adicionado no array1, caso impar no array2
+ao final os logs vao mostrar a quantidade de numeros nos arrays numeros 1 e 2.
 
 */
 
