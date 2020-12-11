@@ -156,14 +156,13 @@ console.log(array)
 console.log(min)
 console.log(max)
 
-
-
 */
 
-/*
-
-
-
+/* 2:
+const hello= () =>{
+alert("Hello Labenu!")
+}
+hello()
 */
 
 /*
