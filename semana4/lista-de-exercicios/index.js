@@ -1,5 +1,5 @@
 // Lista de Exercícios
-//Exercícios de interpretação de código
+// Exercícios de interpretação de código
 
 /* 1: 
 Aqui temos um código para converter moedas, na primeira linha a função é criada e nomeada.
@@ -21,7 +21,7 @@ Na quinta e sexta linha temos duas variáveis ambas calculando o tipo de investi
 
 e nas ultimas linhas temos dois Logs o primeiro com o resultado das operações acima sendo eles 165 em açoes e no segundo teríamos um erro ja que o tesouro direto nao é uma opção.
 
-*/ 
+*/
 
 /* 3:
 Nas tres primeiras linhas temos 3 variáveis como arrays um chamado numeros ja com valores e os array1 e array2 sem nenhum dado inicial.
@@ -174,7 +174,27 @@ Em minha visão os arrays são utilizados para armazenar grande quantidades de d
 usaria array para trabalhar com numeros ou uma lista de nomes.
 usaria o objeto para a criação de um formulário de cadastro por exemplo.
 
+
 */
+
+/* 2:
+
+criaRetangulo = (lado1 = parseInt(prompt('Insira o primeiro Lado do retangulo!')), lado2 = parseInt(prompt('Insira o segundo Lado do retangulo!'))) => {
+    largura = lado1
+    altura = lado2
+    perimetro = (2 * (lado1 + lado2))
+    area = (lado1 * lado2)
+    console.log(largura)
+    console.log(altura)
+    console.log(perimetro)
+    console.log(area)
+}
+
+criaRetangulo()
+
+
+*/
+
 
 /*
 
@@ -183,14 +203,29 @@ usaria o objeto para a criação de um formulário de cadastro por exemplo.
 */
 
 
+/*
 
 
 
+*/
+
+
+/*
 
 
 
+*/
+
+
+/*
 
 
 
+*/
 
 
+/*
+
+
+
+*/
