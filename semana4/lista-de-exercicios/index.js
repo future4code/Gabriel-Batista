@@ -114,8 +114,31 @@ tiposDeTriangulo()
 
 */
 
-/*
+/* 5:
 
+let num1= parseInt(prompt('Insira o primeiro Numero!'))
+let num2= parseInt(prompt('Insira o segundo Numero!'))
+
+const analiseDeDadosDivisiveis= () =>{
+while(num1>num2) {
+    console.log("Primeiro numero é maior "+ num1);
+let diferenca = (num1-num2)
+console.log("Diferença entre os numeros "+diferenca)
+console.log(num1+" é divisível por "+num2 + " Resultado: " +(num1/num2))
+break;
+}
+}
+const analiseDeDadosNaoDivisiveis= () =>{
+while(num1<num2) {
+    console.log("Segundo numero é Maior "+ num2);
+let diferenca = (num1-num2)
+console.log("Diferença entre os numeros "+diferenca)
+console.log(num1+" Não divisível por "+num2 )
+ break;
+}
+}
+analiseDeDadosDivisiveis()
+analiseDeDadosNaoDivisiveis()
 
 
 */
