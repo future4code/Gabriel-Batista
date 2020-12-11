@@ -35,6 +35,37 @@ ao final os logs vao mostrar a quantidade de numeros nos arrays numeros 1 e 2.
 Nas tres primeiras linhas temos 3 variáveis sendo elas uma constante em formato de lista com o nome numeros contendo positivos e negativos, numero1 com o conteúdo infinity que seria considerado basicamente qualquer numero inteiro e a numero2 contendo inicialmente 0 como valor.
 logo abaixo temos um for que checa enquanto o numero do array numeros for menor que o numero1 o valor do numero sera assumido pela variavel numero1. em uma segunda verificação enquanto o valor atual do numero for maior que numero2 ou seja 0 o numero 2 assumira o valor do numero.
 sendo assim os consoles devem exibir os valors finais assumidos pelas variáveis numero1 e numero2
+*/
+
+// Exercícios de Lógica de Programação
+
+/* 1:
+forEach Map e Filter
+cada comando abaixo percorre todo o array atual e duplica sua informação.
+
+const array=[1,2,3]
+array.forEach( (num1,index,array) =>{
+    array.push(num1)
+})
+console.log(array)
+array.map( (num1,index,array) =>{
+    array.push(num1)
+})
+console.log(array)
+
+array.filter( (num1,index,array) =>{
+    array.push(num1)
+})
+console.log(array)
+
+*/
+
+/* 2:
+
+
+*/
+
+/*
 
 
 
@@ -43,9 +74,35 @@ sendo assim os consoles devem exibir os valors finais assumidos pelas variáveis
 /*
 
 
+
 */
 
 /*
+
+
+
+*/
+
+/*
+
+
+
+*/
+
+/*
+
+
+
+*/
+
+/*
+
+
+
+*/
+
+/*
+
 
 
 */
