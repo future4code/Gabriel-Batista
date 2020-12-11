@@ -210,11 +210,25 @@ console.log(`Venha assistir ao filme ${filmes.titulo}, de ${filmes.ano}, dirigid
 */
 
 
-/*
+// /* 4
+
+// let pessoa = {
+//     nome:'Peter Jackson',
+//     idade: 26,
+//     email:'PeterJackson@jackson.com',
+//     endereco: 'rua teste'
+// }
+// anonimizarPessoa= () =>{
+//      Anonimo = {...pessoa}
+//     Anonimo.nome = 'Anonimo'
+//     console.log(Anonimo)
+//  }
 
 
+// console.log(`Nome ${pessoa.nome}, idade ${pessoa.idade}, email ${pessoa.email} endereco ${pessoa.endereco}`)
+// anonimizarPessoa()
 
-*/
+// */
 
 
 /*
