@@ -141,6 +141,7 @@ analiseDeDadosDivisiveis()
 analiseDeDadosNaoDivisiveis()
 
 */
+// Exercícios de Funções
 
 /* 1:
 
@@ -165,9 +166,13 @@ alert("Hello Labenu!")
 hello()
 */
 
-/*
+// Exercícios de Objetos
 
+/* 1: 
+Em minha visão os arrays são utilizados para armazenar grande quantidades de dados simples ja os objetos podem levar varias informações estruturadas.
 
+usaria array para trabalhar com numeros ou uma lista de nomes.
+usaria o objeto para a criação de um formulário de cadastro por exemplo.
 
 */
 
