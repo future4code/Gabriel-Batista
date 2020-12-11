@@ -140,10 +140,21 @@ console.log(num1+" Não divisível por "+num2 )
 analiseDeDadosDivisiveis()
 analiseDeDadosNaoDivisiveis()
 
-
 */
 
-/*
+/* 1:
+
+ nao finalizada vou deixar para o final
+let array =[22,73,4,55,33,2,15,6,126,42]
+let min = Math.min(...array);
+let max = Math.max(...array);
+ 
+// array.filter( (num1,index,array) =>{
+   
+// })
+console.log(array)
+console.log(min)
+console.log(max)
 
 
 
