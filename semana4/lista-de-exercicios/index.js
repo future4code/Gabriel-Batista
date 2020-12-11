@@ -61,7 +61,20 @@ console.log(array)
 */
 
 /* 2:
+const booleano1 = true
+const booleano2 = false
+const booleano3 = !booleano2
+const booleano4 = !booleano3 
 
+a) `booleano1 && booleano2 && !booleano4`  Retornaria : False
+
+b) `(booleano1 && booleano2) || !booleano3` Retornaria : False
+
+c)  `(booleano2 || booleano3) && (booleano4 || booleano1)` :Retornaria : True 
+
+d) `!(booleano2 && booleano3) || !(booleano1 && booleano3)` :Retornaria : True 
+
+e) `!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)` :Retornaria : false 
 
 */
 
