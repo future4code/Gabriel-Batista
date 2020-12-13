@@ -265,9 +265,28 @@ idades.forEach(anos => {
 */
 
 
-/*
+/* 2:
+const array = [1, 2, 3, 4, 5, 6]
+console.log(array)
 
+const dobraValor = array.map(num=>num*2)
+console.log(dobraValor)
 
+const triplicaValor = array.map(num=>num*3)
+console.log(triplicaValor)
+
+let par =[]
+let impar =[]
+
+array.forEach(num => {
+    if (num%2 ==0) {
+        par.push(num)      
+    } else{
+        impar.push(num)   
+    }
+})
+console.log(par+' São numero pares')
+console.log(impar+' São numero impares')
 
 */
 
