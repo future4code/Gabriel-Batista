@@ -80,8 +80,6 @@ e) `!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)` :Ret
 
 /* 3:
 
-o código exibe os numeros conforme solicitado porem nao consegui incluir o 0.
-
 const quantidadeDeNumerosPares = parseInt(prompt('Quantos numeros pares devem ser mostrados?'))
 let i = 0
 while(i < quantidadeDeNumerosPares) {
@@ -143,21 +141,31 @@ analiseDeDadosNaoDivisiveis()
 */
 // Exercícios de Funções
 
-/* 1:
+// /* 1:
 
- nao finalizada vou deixar para o final
 let array =[22,73,4,55,33,2,15,6,126,42]
 let min = Math.min(...array);
 let max = Math.max(...array);
- 
-// array.filter( (num1,index,array) =>{
-   
-// })
-console.log(array)
-console.log(min)
-console.log(max)
 
-*/
+console.log(array)
+function segundoMaiorEMenor() {
+    let maxIndice = array.indexOf(max) 
+    array.splice(maxIndice, 1);
+    let segundoMax = Math.max(...array);
+    console.log('O segundo maior numero é :'+segundoMax) 
+
+    let minIndice = array.indexOf(min) 
+    array.splice(minIndice, 1);
+    let segundoMin = Math.min(...array);
+    console.log('O segundo maior numero é :'+segundoMin)   
+}
+segundoMaiorEMenor()
+
+// console.log(array)
+// console.log(min)
+
+
+// */
 
 /* 2:
 const hello= () =>{
