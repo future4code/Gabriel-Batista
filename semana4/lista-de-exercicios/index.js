@@ -202,8 +202,8 @@ let filmes = {
     titulo:'O Senhor dos Anéis',
     ano:2001,
     diretor:'Peter Jackson',
-    atores: (' Elijah Wood ,Ian McKellen'),
-    atrizes:(' Cate Blanchett, Miranda Otto'),
+    atores: ['Elijah Wood' ,' Ian McKellen'],
+    atrizes:['Cate Blanchett', ' Miranda Otto'],
 }
 console.log(`Venha assistir ao filme ${filmes.titulo}, de ${filmes.ano}, dirigido por ${filmes.diretor} e estrelado por ${filmes.atores},${filmes.atrizes}`)
 
