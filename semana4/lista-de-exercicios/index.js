@@ -245,7 +245,6 @@ const pessoas =[
 	{ nome: "Artur", idade: parseInt(89) } 
 ]
 let idades = [(pessoas[0].idade),(pessoas[1].idade) ,(pessoas[2].idade) ,(pessoas[3].idade)]
-let nomes = [(pessoas[0].nome),(pessoas[1].nome) ,(pessoas[2].nome) ,(pessoas[3].nome)]
 console.log('Maiores de idade')
 idades.forEach(anos => {
     if (anos >= 20) {
@@ -290,6 +289,48 @@ console.log(impar+' São numero impares')
 
 */
 
+
+/* 3:
+const pessoas = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+let alturaMinima= 1.5
+let idadeMinima=15
+let idadeMaxima = 60
+
+let permitido =[]
+let naoPermitido =[]
+
+
+let Permitidas = pessoas.filter( function( elem, index, array ) {
+   if (elem.altura<1.5){
+              naoPermitido.push(elem.nome)
+    } else if (elem.idade<15) {
+        naoPermitido.push(elem.nome)
+    } else if (elem.idade>60) {
+        naoPermitido.push(elem.nome)
+    } else{
+        permitido.push(elem.nome) 
+    }
+            
+  
+} )
+
+console.log(' Aprovados:',permitido)
+console.log(' Reprovados:',naoPermitido)
+
+*/
+
+/*
+
+
+
+*/
 
 /*
 
