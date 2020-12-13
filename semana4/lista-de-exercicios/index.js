@@ -141,7 +141,7 @@ analiseDeDadosNaoDivisiveis()
 */
 // Exercícios de Funções
 
-// /* 1:
+/* 1:
 
 let array =[22,73,4,55,33,2,15,6,126,42]
 let min = Math.min(...array);
@@ -161,11 +161,7 @@ function segundoMaiorEMenor() {
 }
 segundoMaiorEMenor()
 
-// console.log(array)
-// console.log(min)
-
-
-// */
+*/
 
 /* 2:
 const hello= () =>{
@@ -239,9 +235,32 @@ console.log(`Venha assistir ao filme ${filmes.titulo}, de ${filmes.ano}, dirigid
 // */
 
 //Exercícios de Funções de array
+
 /* 1:
 
+const pessoas =[
+	{ nome: "Pedro", idade: parseInt(20) },
+	{ nome: "João", idade: parseInt(10) },
+	{ nome: "Paula", idade: parseInt (12) },
+	{ nome: "Artur", idade: parseInt(89) } 
+]
+let idades = [(pessoas[0].idade),(pessoas[1].idade) ,(pessoas[2].idade) ,(pessoas[3].idade)]
+let nomes = [(pessoas[0].nome),(pessoas[1].nome) ,(pessoas[2].nome) ,(pessoas[3].nome)]
+console.log('Maiores de idade')
+idades.forEach(anos => {
+    if (anos >= 20) {
+          console.log(anos)
 
+        
+    }
+})
+console.log('Menores de idade')
+idades.forEach(anos => {
+    if (anos < 20) {
+        console.log(anos)
+        
+    }
+})
 
 */
 
