@@ -326,9 +326,41 @@ console.log(' Reprovados:',naoPermitido)
 
 */
 
-/*
+/* 4: não consegui filtrar pelo sexo para definir as nomenclaturas
+
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
 
 
+let feminino = 'Sra'
+
+
+let cancelado =[]
+let naoCancelado =[]
+    consultas.forEach(elem => {
+
+        if (elem.cancelada=== true) {
+            console.log(`Olá, Sr ${elem.nome}. Infelizmente, sua consulta marcada
+            para o dia ${elem.dataDaConsulta} foi cancelada. Se quiser, pode entrar em 
+            contato conosco para remarcá-la `)
+            cancelado.push(elem.nome) 
+        }  
+        else if (elem.cancelada=== false){
+            console.log(`Olá, Sr ${elem.nome}. Estamos enviando esta mensagem para
+            lembrá-lo da sua consulta no dia ${elem.dataDaConsulta}. Por favor, acuse
+            o recebimento deste e-mail.`)
+    
+            naoCancelado.push(elem.nome) 
+        }        
+      
+    });
+
+console.log(' Cancelados:',cancelado)
+console.log(' Não Cancelado:',naoCancelado)
 
 */
 
