@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import axios from "axios";
-import AxiosBasico, { axiosConfig, baseUrl } from "../AxiosBasico"
+import { axiosConfig, baseUrl } from "../AxiosBasico"
 
 const CadastroContainer = styled.div`
 display:flex;

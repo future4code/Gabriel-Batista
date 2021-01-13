@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import axios from "axios";
-import AxiosBasico, { axiosConfig, baseUrl } from "../AxiosBasico"
+import { axiosConfig, baseUrl } from "../AxiosBasico"
+import DetalhesUsuario from './DetalhesUsuario'
 
 const TarefaList = styled.ul`
 display:flex;
@@ -16,7 +17,7 @@ text-align: center;
 list-style: none; 
 `
 
-const InputsContainer = styled.div`
+const InputsContainer = styled.section`
 text-align: center;
 grid-row:2;
 grid-column:2;
@@ -36,9 +37,12 @@ export class TelaLista extends React.Component {
 
   state = {
     ListaPessoas: [],
-    deletar: false
+    deletar: false,
+    userId: '',
+    useremail: '',
+    username: ''
   }
- 
+
   carregarUsuarios = () => {
     const request = axios.get(baseUrl, axiosConfig);
     request
@@ -52,19 +56,46 @@ export class TelaLista extends React.Component {
   };
   componentDidMount = () => {
     this.carregarUsuarios();
-
   };
 
   deleteUser = (id) => {
-    this.state.deletar ?   axios.delete(`${baseUrl}/${id}`, axiosConfig)
-    .then((res) => {
-      this.carregarUsuarios();
-       })
-    .catch((err) => {
-      console.log(err)
-      console.log(id)
-    }) : alert("cacelado")
+    this.setState({ deletar: !this.state.deletar })
+    this.state.deletar ? axios.delete(`${baseUrl}/${id}`, axiosConfig)
+      .then((res) => {
+        this.carregarUsuarios();
+        this.setState({ deletar: false })
+      })
+      .catch((err) => {
+      }) : alert("Tem certeza que deseja deletar? caso sim clique novamente no botão")
   }
+
+  selectTarefa = (id) => {
+    this.state.ListaPessoas.map((taref) => {
+      if (id === taref.id) {
+        return (
+        this.setState({ userId: taref.id }),
+        console.log(this.state.userId),
+        this.carregarDetalhes()
+        )
+      }
+    })
+
+  }
+  carregarDetalhes = () => {
+    const request = axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${this.state.userId}`, axiosConfig);
+    request
+      .then((resposta) => {
+        alert("localizado :)");
+        this.setState({ userId: '' });
+        console.log(resposta);
+        // console.log(this.state.username)
+      })
+      .catch((erro) => {
+
+        alert("Impossivel localizar os Usuarios :(" + erro.message);
+      });
+  };
+
   render() {
 
     return (
@@ -74,8 +105,8 @@ export class TelaLista extends React.Component {
           return (
             <TarefaList>
               <Tarefa>
-                <p>{user.name}</p>
-                <BotaoDelete onClick={() => {this.deleteUser(user.id)}} >Apagar</BotaoDelete>
+                <p onClick={() => this.selectTarefa(user.id)}>{user.name}</p>
+                <BotaoDelete onClick={() => { this.deleteUser(user.id) }} >Apagar</BotaoDelete>
               </Tarefa>
             </TarefaList>
           )
