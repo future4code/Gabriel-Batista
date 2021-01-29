@@ -54,7 +54,6 @@ function App() {
     setrenderPage(!renderPage)
   }
 
-
   const changePage = () => {
     if (renderPage === true) {
       return (
