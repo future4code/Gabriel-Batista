@@ -199,6 +199,7 @@ class App extends React.Component {
 
     return (
       <ContainerPrincipal>
+
         <Menu>
           <BotaoMenu onClick={this.MudarTela}>{this.state.isToggleOn ? 'Lista de Usuarios' : 'Cadastro'}</BotaoMenu>
         </Menu>
