@@ -1,9 +1,11 @@
 export const goToHomePage = (history) => {
   history.push("/");
-};
-
+}
 export const goToLogin = (history) => {
   history.push("/login");
+};
+export const goToLogout = (history) => {
+  history.push("/logout");
 };
 export const goToRegister = (history) => {
   history.push("/register");
