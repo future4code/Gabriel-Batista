@@ -13,12 +13,11 @@ import ListTripsPage from './Componentes/userArea/ListTripsPage';
 import TripDetailsPage from './Componentes/userArea/TripDetailsPage';
 
 const App = () => {
+ 
   const [viagemList, setViagemList] = useState('');
 
   useEffect(() => {
-    if (viagemList === '') {
-      getTrips()
-       }
+       getTrips()
   }, [viagemList])
 
 
@@ -29,7 +28,7 @@ const App = () => {
       )
       .then((res) => {
         setViagemList(res.data.trips)
-      })
+       })
       .catch((err) => {
         console.log(err);
       });
@@ -55,7 +54,7 @@ const App = () => {
           <ListTripsPage viagemList={viagemList}></ListTripsPage>
         </Route>
         <Route exact path={"/criarnovaviagem"}>
-          <CreateTripPage ></CreateTripPage>
+          <CreateTripPage getTrips={getTrips}></CreateTripPage>
         </Route>
         <Route exact path={"/TripDetailsPage"}>
           <TripDetailsPage></TripDetailsPage>

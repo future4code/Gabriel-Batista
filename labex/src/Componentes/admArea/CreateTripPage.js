@@ -1,44 +1,32 @@
 import axios from 'axios';
-import React, { useState} from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import { useProtectedPage } from '../hooks/Hooks';
 import { BaseContainer } from '../Styled'
+import useForm from "../hooks/Hooks";
 
 const CreateTripPage = () => {
   useProtectedPage();
-  const [name, setname] = useState("");
-  const [planet, setplanet] = useState("");
-  const [date, setdate] = useState(0);
-  const [description, setdescription] = useState("");
-  const [durationInDays, setdurationInDays] = useState(Number);
-  
-  const getName = (e) => {
-    setname(e.target.value);
+  const history = useHistory();
+
+
+  const [form, onChange, clear] = useForm({
+    name: '',
+    planet: '',
+    date: '',
+    description: '',
+    durationInDays: ''
+  });
+  const handleClick = (event) => {
+    event.preventDefault();
+    createViagem()
+    console.log("BODY:", form);
+    clear();
   };
 
-  const getPlanet= (e) => {
-    setplanet(e.target.value);
-  };
-  
-  const getDate = (e) => {
-    setdate(e.target.value);
-  };
-  
-  const getDescription = (e) => {
-    setdescription(e.target.value);
-  };
-  
-  const getDurationInDays = (e) => {
-    setdurationInDays(e.target.value);
-  };
+
   const createViagem = () => {
-    const body =
-    {
-      name: name,
-      planet: planet,
-      date: date,
-      description: description,
-      durationInDays: durationInDays
-    }
+    const body = form
 
     axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-marques-epps/trips",
       body,
@@ -50,7 +38,8 @@ const CreateTripPage = () => {
     )
       .then((res) => {
         window.alert("Nova viagem criada com sucesso!!!")
-           // history.push('/admpage')
+        history.push('/admpage')
+      
       })
       .catch((err) => {
         console.log(err)
@@ -60,12 +49,49 @@ const CreateTripPage = () => {
 
   return (
     <BaseContainer>
-      <input value={name} onChange={getName} placeholder="Nome" type='Text'></input>
-      <input value={planet} onChange={getPlanet} placeholder="Planeta" type='Text'></input>
-      <input value={date} onChange={getDate} placeholder="Data da partida" type='date'></input>
-      <input value={description} onChange={getDescription} placeholder="Descrição" type='Text'></input>
-      <input value={durationInDays} onChange={getDurationInDays} placeholder="Duração em dias"type='Number'></input>
-      <button onClick={createViagem}> enviar </button>
+      <form onSubmit={handleClick}>
+        <input
+          name="name"
+          value={form.name}
+          onChange={onChange}
+          placeholder="Nome"
+          type="text"
+          required
+        />
+        <input
+          name="planet"
+          value={form.planet}
+          onChange={onChange}
+          placeholder="Nome do planeta"
+          type="text"
+          required
+        />
+        <input
+          name="date"
+          value={form.date}
+          onChange={onChange}
+          placeholder="Data da partida"
+          type="date"
+          required
+        />
+        <textarea
+          name="description"
+          value={form.description}
+          onChange={onChange}
+          placeholder="Insira os detalhes sobre a viagem!"
+          type="text"
+          required
+        />
+        <input
+          name="durationInDays"
+          value={form.durationInDays}
+          onChange={onChange}
+          placeholder="Duração em dias"
+          type="number"
+          required
+        />
+        <button>Criar Viagem</button>
+      </form>
     </BaseContainer>
   )
 }
