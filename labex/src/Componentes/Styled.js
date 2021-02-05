@@ -18,11 +18,14 @@ text-align: center;
 border: solid;
 align-items:center;
 justify-content: space-around;
+justify-items:center;
+
 `
 export const Detalhes = styled.section`
 display:grid;
-width:20vw;
-height:50vh;
+width:30vw;
+max-height:80vh;
+min-height:20vh;
 text-align: center;
 border: solid;
 align-items:center;
@@ -30,21 +33,37 @@ justify-content: space-around;
 overflow:scroll;
 overflow-x:hidden;
 position:absolute;
+padding:5px;
+background-color:whitesmoke;
 `
 export const Formuser = styled.section`
 display:flex;
-flex-direction:column;
-justify-content:space-between;
-text-align: center;
-align-items:center;
-width:35vw;
-height:50vh;
+width:30vw;
+height:80vh;
 position:absolute;
+flex-direction:column;
+align-items:center;
 `
 
 export const Formbase = styled.form`
 display:flex;
 flex-direction:column;
+`
 
-position:absolute;
+export const DetailDiv = styled.section`
+
+/* display:flex; */
+/* position:absolute; */
+/* flex-direction:column; */
+/* align-items:center;
+ */
+`
+
+export const ListiDiv = styled.section`
+padding:10px;
+/* display:flex; */
+/* position:absolute; */
+/* flex-direction:column; */
+/* align-items:center;
+ */
 `

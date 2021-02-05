@@ -1,31 +1,33 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-import { BaseContainer } from '../Styled'
+import { BaseContainer, ListiDiv } from '../Styled'
 import FormUsuario from './FormUsuario';
 import TripDetailsPage from './TripDetailsPage';
 
 const ListTripsPage = (viagemList) => {
   const history = useHistory();
   const [ids, setids] = useState('');
-  const [increverse, setincreverse] = useState(false);
+  const [inscreverse, setinscreverse] = useState(false);
   const [detalhes, setdetalhes] = useState(false);
-  const [Aprovados, setAprovados] = useState([]);
   const [Candidatos, setCandidatos] = useState([]);
+  const [tripid, settripid] = useState('');
+  const [Aprovados, setAprovados] = useState([]);
+
 
   const CarregarLista = () => {
-    if (increverse) {
+    if (inscreverse) {
       return (<FormUsuario ids={ids} />)
-    }else {
-      return(<TripDetailsPage Candidatos={Candidatos}></TripDetailsPage>)
+    } else if (detalhes) {
+      return (<TripDetailsPage tripid={tripid} Candidatos={Candidatos} Aprovados={Aprovados}></TripDetailsPage>)
     }
-    
+
   }
 
-  const getTripsinfo = () => {
+  const getTripsinfo = (id) => {
     axios
       .get(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-marques-epps/trip/${ids}`,
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-marques-epps/trip/${id}`,
         {
           headers: {
             auth: localStorage.getItem("token")
@@ -33,30 +35,30 @@ const ListTripsPage = (viagemList) => {
         }
       )
       .then((res) => {
-        setAprovados(res.data.trip.approved)
         setCandidatos(res.data.trip.candidates)
-        console.log('object', res.data.trip.candidates)
-      })
+        setAprovados(res.data.trip.approved)
+        setids(id)
+        settripid(res.data.trip.id)
+        })
       .catch((err) => {
         console.log(err)
       })
   }
-  
 
   return (
-    <BaseContainer style={{ justifyContent: "space-around", alignItems: "center", overflow: 'scroll', overflowX: 'hidden'}}>
+    <BaseContainer style={{ justifyContent: "space-around", alignItems: "center", overflow: 'scroll', overflowX: 'hidden' }}>
       {CarregarLista()}
       {viagemList.viagemList.map((item) => {
         return (
-          <div>
+          <ListiDiv>
             <h2>{item.name}</h2>
             <p>Planeta: {item.planet}</p>
             <p>tempo de viagem: {item.durationInDays} dias</p>
             <p>data de lançamento: {item.date}</p>
             <p>{item.description}</p>
-            <button onClick={() => { setids(item.id) || setincreverse(!increverse) }} >Inscrever-se</button>
-            <button onClick={() => { setids(item.id) || setincreverse(!increverse) || getTripsinfo()}} >Ver Detalhes</button>
-          </div>
+            <button onClick={() => { getTripsinfo(item.id) || setinscreverse(!inscreverse) || setdetalhes(false) }} >Inscrever-se</button>
+            <button onClick={() => { getTripsinfo(item.id) || setdetalhes(!detalhes) || setinscreverse(false) }} >Ver Detalhes</button>
+          </ListiDiv>
         )
       })}
     </BaseContainer>

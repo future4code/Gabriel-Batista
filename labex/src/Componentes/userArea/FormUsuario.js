@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import React from 'react'
-import { BaseContainer, Formuser,Formbase } from '../Styled'
+import { BaseContainer, Formuser, Formbase } from '../Styled'
 import useForm from "../hooks/Hooks";
 import { useHistory } from 'react-router-dom';
 
@@ -36,6 +36,8 @@ const FormUsuario = (ids) => {
   return (
     <Formuser>
       <Formbase onSubmit={handleClick}>
+        <hr />
+        <h3>Cadastro Viajante</h3>
         <input
           name="name"
           value={form.name}
@@ -44,14 +46,17 @@ const FormUsuario = (ids) => {
           type="text"
           required
         />
+        <hr />
         <input
           name="age"
           value={form.age}
           onChange={onChange}
           placeholder="Idade em anos"
           type="number"
+          min={18}
           required
         />
+        <hr />
         <textarea
           name="applicationText"
           value={form.applicationText}
@@ -60,6 +65,7 @@ const FormUsuario = (ids) => {
           type="text"
           required
         />
+        <hr />
         <input
           name="profession"
           value={form.profession}
@@ -68,6 +74,7 @@ const FormUsuario = (ids) => {
           type="text"
           required
         />
+        <hr />
         <select
           name="country"
           value={form.country}
@@ -76,12 +83,14 @@ const FormUsuario = (ids) => {
           type="text"
           required
         >
+
           <option value="brasil">brasil</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
         </select>
-        <button>Inscrever-se</button>
+        <hr />
+        <button>Enviar</button>
       </Formbase>
     </Formuser>
   )
