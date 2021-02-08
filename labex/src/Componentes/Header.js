@@ -1,8 +1,9 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
 import HomePage from './home/HomePage';
+import { getPaises } from './hooks/Hooks';
 import { goTolistaviagem, goToHomePage } from './Routers';
-import {HeaderBox} from './Styled'
+import {Buttons, HeaderBox} from './Styled'
 
 
 
@@ -10,8 +11,8 @@ const Header = () => {
   const history = useHistory();
   return (
     <HeaderBox>
-    <button onClick={() => goToHomePage(history, "/")}>home</button>
-    <button onClick={() => goTolistaviagem(history, "listaviagem")}>Lista</button>
+    <Buttons onClick={() => goToHomePage(history, "/")}>home</Buttons>
+    <Buttons onClick={() => goTolistaviagem(history, "listaviagem")}>Lista</Buttons>
     <HomePage></HomePage>
   </HeaderBox>
   )

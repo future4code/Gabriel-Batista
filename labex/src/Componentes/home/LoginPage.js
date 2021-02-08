@@ -1,23 +1,23 @@
-import React, { useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom';
 import '../../App.css'
-import { goToAdm } from '../Routers'
-import { BaseContainer } from '../Styled';
+import { BaseContainer, Buttons, Formlogin, GifDiv } from '../Styled';
+import useForm from "../hooks/Hooks";
 
 
 export const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const history = useHistory()
+  const [form, onChange, clear] = useForm({ email: "", password: "" });
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value)
-  }
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log("BODY:", form);
+    clear();
+  };
 
-  const handlePassword = (e) => {
-    setPassword(e.target.value)
-  }
 
   useEffect(() => {
     const token = localStorage.getItem("token")
@@ -28,12 +28,8 @@ export const LoginPage = () => {
   }, [history])
 
   const login = () => {
-    const body = {
-      email: email,
-      password: password
-    }
 
-    axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-marques-epps/login", body)
+    axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/gabriel-marques-epps/login", form)
       .then((res) => {
         localStorage.setItem("token", res.data.token)
         history.push('/admpage')
@@ -46,10 +42,26 @@ export const LoginPage = () => {
 
   return (
     <BaseContainer>
-      <h1>Login</h1>
-      <input value={email} onChange={handleEmail} placeholder="E-mail" />
-      <input value={password} onChange={handlePassword} placeholder="Senha" />
-      <button onClick={login}>Login</button>
+      <GifDiv>
+        <Formlogin onSubmit={handleClick}>
+           <h3>Login</h3>
+          <input
+            name="email"
+            value={form.email}
+            onChange={onChange}
+            placeholder="E-mail"
+            type="email"
+            required />
+          <input
+            name="password"
+            value={form.password}
+            onChange={onChange}
+            placeholder="Senha"
+            type="password"
+            required />
+          <Buttons onClick={login}>Login</Buttons>
+        </Formlogin>
+      </GifDiv>
     </BaseContainer>
   )
 }

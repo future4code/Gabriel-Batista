@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css'
 import { useHistory } from "react-router-dom";
 import { goToLogin, goToRegister,goToLogout } from '../Routers';
-import { BaseContainer } from '../Styled';
+import { BaseContainer, Buttons, HomeDiv } from '../Styled';
 
 
 
@@ -16,11 +16,11 @@ function logout() {
 }
 
   return (
-    <div>
-      <button onClick={() => goToLogin(history, "login")}>login</button>
-      <button onClick={() => logout()}>logout</button>
-      <button onClick={() => goToRegister(history, "register")}>Register</button>
-    </div>
+    <HomeDiv>
+      <Buttons onClick={() => goToLogin(history, "login")}>login</Buttons>
+      <Buttons onClick={() => logout()}>logout</Buttons>
+      <Buttons onClick={() => goToRegister(history, "register")}>Register</Buttons>
+    </HomeDiv>
   )
 }
 

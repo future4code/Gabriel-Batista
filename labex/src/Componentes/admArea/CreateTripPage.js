@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useProtectedPage } from '../hooks/Hooks';
-import { BaseContainer, Formbase } from '../Styled'
+import { BaseContainer, Buttons, FormCreat } from '../Styled'
 import useForm from "../hooks/Hooks";
 
 const CreateTripPage = () => {
@@ -49,7 +49,7 @@ const CreateTripPage = () => {
 
   return (
     <BaseContainer>
-      <Formbase onSubmit={handleClick}>
+      <FormCreat onSubmit={handleClick}>
         <input
           name="name"
           value={form.name}
@@ -90,8 +90,8 @@ const CreateTripPage = () => {
           type="number"
           required
         />
-        <button>Criar Viagem</button>
-      </Formbase>
+        <Buttons>Criar Viagem</Buttons>
+      </FormCreat>
     </BaseContainer>
   )
 }

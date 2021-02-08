@@ -35,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
+      <BrowserRouter>
        <Header></Header>
       <Switch>
         <Route exact path="/">
